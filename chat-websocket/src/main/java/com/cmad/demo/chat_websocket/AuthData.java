@@ -1,30 +1,26 @@
 package com.cmad.demo.chat_websocket;
 
 public class AuthData {
-	private String name;
-	private String tok;
-	public AuthData() {
+	String userId;
+	String userToken;
 
+	public String getUserId() {
+		return userId;
 	}
-	public AuthData(String uname) {
-		name = uname;
-		System.out.println("AuthData.AuthData() with uname = " +uname);
+
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
-	public String getName() {
-		return name;
+
+	public String getUserToken() {
+		return userToken;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getTok() {
-		return tok;
-	}
-	public void setTok(String toki) {
-		this.tok = toki;
-		System.out.println("AuthData.setTok() token is : "+tok);
+
+	public void setUserToken(String userToken) {
+		this.userToken = userToken;
 	}
 
 	public String toString() {
-		return "name:" + name + "tok:" + tok;
+		return "userId:" + userId + "userToken:" + userToken;
 	}
 }
